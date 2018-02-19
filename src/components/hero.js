@@ -4,6 +4,7 @@ import styles from './hero.module.css'
 export default ({ person }) => (
   <div className={styles.hero}>
     <img
+      className={styles.heroImage}
       src={`${person.node.image.file.url}?w=1180&h=600&fit=pad&bg=rgb:000000`}
       alt=""
     />
