@@ -14,17 +14,24 @@ class BlogPostTemplate extends React.Component {
         <Helmet title={`${post.title} | ${siteTitle}`} />
         <div className="wrapper">
           <div className={styles.hero}>
-            <img src={`${post.heroImage.file.url}?w=1180&h=400&fit=fill`} alt="" />
+            <img
+              src={`${post.heroImage.file.url}?w=1180&h=400&fit=fill`}
+              alt=""
+            />
           </div>
           <h1 className="section-headline">{post.title}</h1>
           <p
             style={{
-              display: 'block'
+              display: 'block',
             }}
           >
             {post.publishDate}
           </p>
-          <div dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html }} />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: post.body.childMarkdownRemark.html,
+            }}
+          />
         </div>
       </div>
     )
@@ -35,7 +42,7 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    contentfulBlogPost(slug: {eq: $slug}) {
+    contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
@@ -50,4 +57,4 @@ export const pageQuery = graphql`
       }
     }
   }
-  `
+`
