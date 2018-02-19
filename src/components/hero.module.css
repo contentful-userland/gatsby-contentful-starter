@@ -1,0 +1,24 @@
+.hero {
+  position: relative;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.heroDetails {
+  position: absolute;
+  background: rgba(0, 0, 0, .7);
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.heroHeadline {
+  margin: 0;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 1.125em;
+  font-weight: bold;
+}

@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1em;
+  font-size: 1.25em;
+}
+
+.navigationItem {
+  margin: 0 1em;
+}
+  .navigationItem a {
+    color: currentColor;
+  }

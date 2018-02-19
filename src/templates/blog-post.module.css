@@ -1,0 +1,10 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 12.5em;
+  background: #e1e1e1;
+  margin: -1em -2.5em 1em;
+  font-size: 2em
+}

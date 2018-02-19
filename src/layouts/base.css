@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/static/avenir-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.65;
+  color: #373F49;
+  background: #eee;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+a {
+  color: currentColor;
+}
+
+.wrapper {
+  width: calc(100% - 10em);
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+/**
+ * article grid
+ */
+.article-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -1em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  .article-list > li {
+    flex: 1 1 calc(33.333% - 2em);
+    max-width: calc(33.3333% - 2em);
+  }
+
+/**
+ *
+ */
+.section-headline {
+  padding: 1em 0;
+  margin: 0 0 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+/**
+ *
+ */
+.list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+  .list-inline li {
+    display: inline-block;
+  }
