@@ -1,8 +1,8 @@
 {
   "name": "gatsby-contentful-blog",
-  "description": "Starter Gatsby Blog",
+  "description": "Starter Contentful Gatsby Blog",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Stefan Judis <stefanjudis@gmail.com>",
   "bugs": {
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
