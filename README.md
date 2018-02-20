@@ -55,6 +55,6 @@ Run a production build into `./public` and publish the site to github pages.
 
 ## Roadmap
 
-- [ ] make the starter completely responsive
-- [ ] include tags
-- [ ] support [traced placeholders](https://github.com/gatsbyjs/gatsby/issues/2435)
+- [ ] [make the starter completely responsive](https://github.com/contentful-userland/gatsby-contentful-starter/issues/2)
+- [ ] [include tags](https://github.com/contentful-userland/gatsby-contentful-starter/issues/3)
+- [ ] [support traced placeholders](https://github.com/contentful-userland/gatsby-contentful-starter/issues/4)
