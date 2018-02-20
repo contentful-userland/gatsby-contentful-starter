@@ -31,7 +31,7 @@ $ gatsby new contentful-starter https://github.com/contentful-userland/gatsby-co
 
 This project comes with a Contentful setup command `npm run setup`.
 
-![Command line dialog of the npm run setup command](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "Command line dialog of the npm run setup command")
+![Command line dialog of the npm run setup command](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/setup.jpg "Command line dialog of the npm run setup command")
 
 This command will ask you for a space ID, and access tokens for the Contentful Management, Preview and Delivery API and then import the needed content model into the space you define and write a config file (`./contentful.json`).
 
