@@ -4,6 +4,10 @@ Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
 
 ![The index page of the starter blog](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "The index page of the starter blog")
 
+Static sites are scalable, secure and have very little required maintainance. They come with a drawbag though. Not everybody feels good editing files, build a project and upload it somewhere. This is where Contentful comes into play.
+
+With Contentful and Gatsby you can connect your favorite static site generator with an API that provides an easy to use interface for people writing content.
+
 ## Requirements
 
 To use this project you have to have a Contentful account. If you don't have on yet you can register at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
@@ -30,6 +34,8 @@ This project comes with a Contentful setup command `npm run setup`.
 This command will ask you for a space ID, and access tokens for the Contentful Management, Preview and Delivery API and then import the needed content model into the space you define and write a config file (`./contentful.json`).
 
 ## Crucial Commands
+
+This projects comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
 
 ### `npm run dev`
 
