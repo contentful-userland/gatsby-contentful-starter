@@ -7,10 +7,12 @@
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
   "dependencies": {
+    "contentful-import": "^6.2.0",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-source-contentful": "^1.3.38",
     "gatsby-transformer-remark": "^1.7.32",
+    "inquirer": "^5.1.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
@@ -37,11 +39,12 @@
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "postinstall": "node ./bin/hello.js"
+    "postinstall": "node ./bin/hello.js",
+    "import": "node ./bin/import.js"
   }
 }
