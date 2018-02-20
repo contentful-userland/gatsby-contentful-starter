@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-contentful-blog",
+  "name": "gatsby-contentful-starter",
   "description": "Starter Contentful Gatsby Blog",
   "version": "1.0.0",
   "author": "Stefan Judis <stefanjudis@gmail.com>",
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "chalk": "^2.3.1",
     "eslint": "^4.15.0",
     "eslint-plugin-react": "^7.5.1",
     "gatsby": "^1.9.202",
@@ -23,7 +24,8 @@
   },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "contentful"
   ],
   "license": "MIT",
   "main": "n/a",
@@ -39,6 +41,7 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+    "postinstall": "node ./bin/hello.js"
   }
 }
