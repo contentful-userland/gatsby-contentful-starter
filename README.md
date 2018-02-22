@@ -58,4 +58,4 @@ Run a production build into `./public` and publish the site to github pages.
 - [ ] [make the starter completely responsive](https://github.com/contentful-userland/gatsby-contentful-starter/issues/2)
 - [ ] [include tags](https://github.com/contentful-userland/gatsby-contentful-starter/issues/3)
 - [ ] [support traced placeholders](https://github.com/contentful-userland/gatsby-contentful-starter/issues/4)
-- [ ] [add a18n](https://github.com/contentful-userland/gatsby-contentful-starter/issues/6)
+- [ ] [add i18n](https://github.com/contentful-userland/gatsby-contentful-starter/issues/6)
