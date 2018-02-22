@@ -4,13 +4,13 @@ Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
 
 ![The index page of the starter blog](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "The index page of the starter blog")
 
-Static sites are scalable, secure and have very little required maintenance. They come with a drawbag though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
+Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
 
 With Contentful and Gatsby you can connect your favorite static site generator with an API that provides an easy to use interface for people writing content and automate the publishing using services like [Travis CI](https://travis-ci.org/) or [Netlify](https://www.netlify.com/).
 
 ## Requirements
 
-To use this project you have to have a Contentful account. If you don't have on yet you can register at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
+To use this project you have to have a Contentful account. If you don't have one yet you can register at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
 
 ## Getting started
 
@@ -39,7 +39,7 @@ This command will ask you for a space ID, and access tokens for the Contentful M
 
 ## Crucial Commands
 
-This projects comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
+This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
 
 ### `npm run dev`
 
@@ -51,7 +51,7 @@ Run a production build into `./public`. The result is ready to be put on any sta
 
 ### `npm run publish`
 
-Run a production build into `./public` and publish the site to github pages.
+Run a production build into `./public` and publish the site to GitHub pages.
 
 ## Roadmap
 
