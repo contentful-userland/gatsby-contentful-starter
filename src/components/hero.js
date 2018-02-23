@@ -6,8 +6,8 @@ export default ({ person }) => (
   <div className={styles.hero}>
     <Img
       className={styles.heroImage}
-      resolutions={{
-        ...person.node.image.resolutions,
+      sizes={{
+        ...person.node.image.responsiveSizes,
         base64: person.node.image.sqip
       }}
       alt=""

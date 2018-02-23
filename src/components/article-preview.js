@@ -7,8 +7,8 @@ export default ({ article }) => (
   <div className={styles.preview}>
     <Img
       className={styles.heroImage}
-      resolutions={{
-        ...article.heroImage.resolutions,
+      sizes={{
+        ...article.heroImage.responsiveSizes,
         base64: article.heroImage.sqip
       }}
       alt=""
