@@ -4,6 +4,7 @@ module.exports = {
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     'gatsby-transformer-remark',
+    'gatsby-transformer-sqip',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-contentful',

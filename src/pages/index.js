@@ -46,7 +46,11 @@ export const pageQuery = graphql`
           heroImage {
             file {
               url
-            }
+            },
+            resolutions {
+              ...GatsbyContentfulResolutions_withWebp_noBase64
+            },
+            sqip(numberOfPrimitives: 25, blur: 0)
           }
           description {
             childMarkdownRemark {
@@ -69,6 +73,10 @@ export const pageQuery = graphql`
               url
               fileName
               contentType
+            },
+            sqip(numberOfPrimitives: 50, blur: 1),
+            resolutions {
+              ...GatsbyContentfulResolutions_withWebp_noBase64
             }
           }
         }
