@@ -53,7 +53,7 @@ Run in the project locally using the [Contentful Preview API](https://www.conten
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
 
-### `npm run publish`
+### `npm run deploy`
 
 Run a production build into `./public` and publish the site to GitHub pages.
 
