@@ -46,7 +46,13 @@ export const pageQuery = graphql`
           heroImage {
             file {
               url
-            }
+            },
+            responsiveSizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+              srcSet,
+              sizes,
+              aspectRatio
+            },
+            sqip(numberOfPrimitives: 25, blur: 0, width: 350, height: 196, resizingBehavior: SCALE)
           }
           description {
             childMarkdownRemark {
@@ -69,6 +75,12 @@ export const pageQuery = graphql`
               url
               fileName
               contentType
+            },
+            sqip(numberOfPrimitives: 50, blur: 1, width: 1180, height: 480, resizingBehavior: PAD, background: "rgb:000000"),
+            responsiveSizes(maxWidth: 1180, maxHeight: 480, resizingBehavior: PAD, background: "rgb:000000") {
+              srcSet,
+              sizes,
+              aspectRatio
             }
           }
         }
