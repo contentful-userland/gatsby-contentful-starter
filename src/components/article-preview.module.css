@@ -12,3 +12,23 @@
   border: 1px solid #A0A0A0;
   margin-right: .5em;
 }
+
+.preview {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.2s;
+  background: red;
+  opacity: 0;
+}
+
+.active {
+  opacity: 0.5;
+}

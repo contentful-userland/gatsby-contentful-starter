@@ -29,3 +29,19 @@
   font-size: 1.125em;
   font-weight: bold;
 }
+
+.overlay {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.2s;
+  background: red;
+  opacity: 0;
+}
+
+.active {
+  opacity: 0.5;
+}

@@ -39,6 +39,7 @@ export const pageQuery = graphql`
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
+          id
           title
           slug
           publishDate(formatString: "MMMM Do, YYYY")
