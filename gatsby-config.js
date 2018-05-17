@@ -1,4 +1,17 @@
-const contentfulConfig = require('./.contentful')
+const { existsSync } = require('fs')
+if (existsSync('./.env')) { 
+  require('dotenv').config()
+}
+
+const contentfulDev = {
+        "host": "preview.contentful.com",
+	"spaceId": process.env.CFSPACEID,
+	"accessToken": process.env.CPATOKEN
+	}
+const contentfulProd = {
+        "spaceId": process.env.CFSPACEID,
+	"accessToken": process.env.CDATOKEN
+	}
 
 module.exports = {
   pathPrefix: '/gatsby-contentful-starter',
@@ -8,8 +21,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: process.env.NODE_ENV === 'development' ?
-        contentfulConfig.development :
-        contentfulConfig.production
+        contentfulDev :
+        contentfulProd
     },
   ],
 }

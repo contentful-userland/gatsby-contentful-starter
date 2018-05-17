@@ -55,24 +55,14 @@ inquirer
   .prompt(questions)
   .then(({ spaceId, managementToken, accessToken, previewToken }) => {
     console.log('Writing config file...')
-    const configFilePath = path.resolve(__dirname, '..', '.contentful.json')
+    const configFilePath = path.resolve(__dirname, '..', '.env')
     writeFileSync(
       configFilePath,
-      JSON.stringify(
-        {
-          development: {
-            host: 'preview.contentful.com',
-            spaceId,
-            accessToken: previewToken,
-          },
-          production: {
-            spaceId,
-            accessToken,
-          },
-        },
+      `CFSPACEID=${spaceId}
+CPATOKEN=${previewToken}
+CDATOKEN=${accessToken}`,
         null,
         2
-      )
     )
     console.log(`Config file ${chalk.yellow(configFilePath)} written`)
 
