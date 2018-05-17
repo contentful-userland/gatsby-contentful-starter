@@ -37,9 +37,15 @@ This project comes with a Contentful setup command `npm run setup`.
 
 ![Command line dialog of the npm run setup command](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/setup.jpg "Command line dialog of the npm run setup command")
 
-This command will ask you for a space ID, and access tokens for the Contentful Management, Preview and Delivery API and then import the needed content model into the space you define and write a config file (`./contentful.json`).
+This command will ask you for a space ID, and access tokens for the Contentful Management, Preview and Delivery API and then import the needed content model into the space you define and write a config file (`./env`).
 
-`npm run setup` automates that for you but if you want to do it yourself rename `.contentful.json.sample` to `.contentful.json` and add your configuration in this file.
+`npm run setup` automates that for you but if you want to do it yourself, create a file called `.env` in the project's root directory and add these three variables:
+
+`CFSPACEID=`\<your space ID\>
+`CPATOKEN`\<your Content Preview API Token\>
+`CDATOKEN=`\<your Content Delivery API Token\>
+
+If you are using a Continuous Deployment tool like Netlify, do not sync the `./env` file to your source code repository. Instead, manually set those environment variables in the CD tool to ensure they are not exposed publically.
 
 ## Crucial Commands
 
