@@ -5,6 +5,8 @@ const chalk = require('chalk')
 const path = require('path')
 const { writeFileSync } = require('fs')
 
+const argv = require('yargs-parser')(process.argv.slice(2))
+
 console.log(`
   To set up this project you need to provide your Space ID
   and the belonging API access tokens.
@@ -33,27 +35,37 @@ const questions = [
   {
     name: 'spaceId',
     message: 'Your Space ID',
+    when: !argv.spaceId,
     validate: input =>
       /^[a-z0-9]{12}$/.test(input) ||
       'Space ID must be 12 lowercase characters',
   },
   {
     name: 'managementToken',
+    when: !argv.managementToken,
     message: 'Your Content Management API access token',
   },
   {
-    name: 'accessToken',
+    name: 'deliveryToken',
+    when: !argv.accessToken,
     message: 'Your Content Delivery API access token',
   },
   {
     name: 'previewToken',
+    when: !argv.previewToken,
     message: 'Your Content Preview API access token',
   },
 ]
 
 inquirer
   .prompt(questions)
-  .then(({ spaceId, managementToken, accessToken, previewToken }) => {
+  .then(({ spaceId, managementToken, deliveryToken, previewToken }) => {
+
+    spaceId = spaceId || argv,spaceId
+    managementToken = managementToken || argv.managementToken
+    deliveryToken = deliveryToken || argv.deliveryToken
+    previewToken = previewToken || argv.previewToken
+
     console.log('Writing config file...')
     const configFilePath = path.resolve(__dirname, '..', '.contentful.json')
     writeFileSync(
