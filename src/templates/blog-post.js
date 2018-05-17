@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import styles from './blog-post.module.css'
+import Hero from '../components/hero'
+import Img from 'gatsby-image'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -12,13 +14,13 @@ class BlogPostTemplate extends React.Component {
     return (
       <div style={{ background: '#fff' }}>
         <Helmet title={`${post.title} | ${siteTitle}`} />
+        <Hero
+          data={{
+            ...post,
+            title: null,
+          }}
+        />
         <div className="wrapper">
-          <div className={styles.hero}>
-            <img
-              src={`${post.heroImage.file.url}?w=1180&h=400&fit=fill`}
-              alt=""
-            />
-          </div>
           <h1 className="section-headline">{post.title}</h1>
           <p
             style={{
@@ -46,8 +48,16 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        file {
-          url
+        sqip(
+          numberOfPrimitives: 100
+          blur: 0
+          width: 1180
+          background: "rgb:000000"
+        ) {
+          dataURI
+        }
+        sizes(maxWidth: 1180, background: "rgb:000000") {
+          ...GatsbyContentfulSizes_withWebp_noBase64
         }
       }
       body {

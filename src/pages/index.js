@@ -9,23 +9,26 @@ class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
+    const [authorNode] = get(this, 'props.data.allContentfulPerson.edges')
+    const author = authorNode.node
 
     return (
-      <div style={{ background: '#fff' }}>
-        <Helmet title={siteTitle} />
-        <Hero person={author} />
-        <div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
-          <ul className="article-list">
-            {posts.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node} />
-                </li>
-              )
-            })}
-          </ul>
+      <div>
+        <Hero data={author} />
+        <div class="wrapper" style={{ background: '#fff' }}>
+          <Helmet title={siteTitle} />
+          <div className="wrapper">
+            <h2 className="section-headline">Recent articles</h2>
+            <ul className="article-list">
+              {posts.map(({ node }) => {
+                return (
+                  <li key={node.slug}>
+                    <ArticlePreview article={node} />
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     )
@@ -44,8 +47,17 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            file {
-              url
+            sqip(
+              numberOfPrimitives: 25
+              blur: 0
+              width: 350
+              height: 196
+              resizingBehavior: SCALE
+            ) {
+              dataURI
+            }
+            sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+              ...GatsbyContentfulSizes_withWebp_noBase64
             }
           }
           description {
@@ -64,11 +76,24 @@ export const pageQuery = graphql`
             shortBio
           }
           title
-          image {
-            file {
-              url
-              fileName
-              contentType
+          heroImage: image {
+            sqip(
+              numberOfPrimitives: 100
+              blur: 0
+              width: 1180
+              height: 480
+              resizingBehavior: PAD
+              background: "rgb:000000"
+            ) {
+              dataURI
+            }
+            sizes(
+              maxWidth: 1180
+              maxHeight: 480
+              resizingBehavior: PAD
+              background: "rgb:000000"
+            ) {
+              ...GatsbyContentfulSizes_withWebp_noBase64
             }
           }
         }
