@@ -3,21 +3,21 @@
   background: #000;
   color: #fff;
   text-align: center;
-  height: 30em;
 }
 
 .heroImage {
-  height: 100%;
-  width: auto;
-  margin: 0 auto;
+  height: 61.8vh;
+  max-height: 80vw;
 }
 
 .heroDetails {
   position: absolute;
   background: rgba(0, 0, 0, .7);
-  top: 60%;
   left: 50%;
+  bottom: 0;
   transform: translate(-50%, 0);
+  font-size: calc(0.4em + 1vw);
+  padding: 0 0.5em;
 }
 
 .heroHeadline {
