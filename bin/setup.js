@@ -50,11 +50,6 @@ const questions = [
     when: !argv.accessToken,
     message: 'Your Content Delivery API access token',
   },
-  {
-    name: 'previewToken',
-    when: !argv.previewToken,
-    message: 'Your Content Preview API access token',
-  },
 ]
 
 inquirer
@@ -64,7 +59,6 @@ inquirer
     spaceId = spaceId || argv,spaceId
     managementToken = managementToken || argv.managementToken
     deliveryToken = deliveryToken || argv.deliveryToken
-    previewToken = previewToken || argv.previewToken
 
     console.log('Writing config file...')
     const configFilePath = path.resolve(__dirname, '..', '.contentful.json')
@@ -72,15 +66,8 @@ inquirer
       configFilePath,
       JSON.stringify(
         {
-          development: {
-            host: 'preview.contentful.com',
-            spaceId,
-            accessToken: previewToken,
-          },
-          production: {
-            spaceId,
-            accessToken,
-          },
+          spaceId,
+          accessToken: deliveryToken,
         },
         null,
         2
