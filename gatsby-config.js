@@ -1,7 +1,7 @@
 const contentfulConfig = require('./.contentful')
 
 module.exports = {
-  pathPrefix: '/gatsby-contentful-starter',
+  pathPrefix: '/benedikt-roetsch',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
