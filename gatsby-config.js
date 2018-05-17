@@ -1,3 +1,8 @@
+const { existsSync } = require('fs')
+if (existsSync('./.env')) { 
+  require('dotenv').config()
+}
+
 const contentfulDev = {
         "host": "preview.contentful.com",
 	"spaceId": process.env.CFSPACEID,
