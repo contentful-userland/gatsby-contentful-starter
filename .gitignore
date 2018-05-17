@@ -64,4 +64,4 @@ public
 .cache
 
 # contentful config file
-.contentful.json
+# private repo --> .contentful.json
