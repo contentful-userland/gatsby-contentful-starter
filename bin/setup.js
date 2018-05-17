@@ -56,7 +56,7 @@ inquirer
   .prompt(questions)
   .then(({ spaceId, managementToken, deliveryToken, previewToken }) => {
 
-    spaceId = spaceId || argv,spaceId
+    spaceId = spaceId || argv.spaceId
     managementToken = managementToken || argv.managementToken
     deliveryToken = deliveryToken || argv.deliveryToken
 
