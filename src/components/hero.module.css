@@ -16,7 +16,7 @@
   left: 50%;
   bottom: 0;
   transform: translate(-50%, 0);
-  font-size: calc(0.4em + 1vw);
+  font-size: calc(0.5em + 1vw);
   padding: 0 0.5em;
 }
 
