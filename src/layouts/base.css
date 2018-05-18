@@ -32,33 +32,29 @@ a {
 }
 
 .wrapper {
-  width: calc(100% - 10em);
+  width: calc(100% - 10vmin);
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 5vmin 0;
 }
 
 /**
  * article grid
  */
 .article-list {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 -1em;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5vmin;
 }
-  .article-list > li {
-    flex: 1 1 calc(33.333% - 2em);
-    max-width: calc(33.3333% - 2em);
-  }
 
 /**
  *
  */
 .section-headline {
-  padding: 1em 0;
-  margin: 0 0 1em;
+  padding: 0 0 0.4em 0;
+  margin: 0 0 5vmin 0;
   border-bottom: 1px solid #ddd;
 }
 
