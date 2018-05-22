@@ -41,11 +41,11 @@ This command will ask you for a space ID, and access tokens for the Contentful M
 
 `npm run setup` automates that for you but if you want to do it yourself, create a file called `.env` in the project's root directory and add these three variables:
 
-`CFSPACEID=`\<your space ID\>
+`CONTENTFUL_SPACE_ID=`\<your space ID\>
 
-`CPATOKEN`\<your Content Preview API Token\>
+`CONTENTFUL_PREVIEW_TOKEN=`\<your Content Preview API Token\>
 
-`CDATOKEN=`\<your Content Delivery API Token\>
+`CONTENTFUL_DELIVERY_TOKEN=`\<your Content Delivery API Token\>
 
 If you are using a Continuous Deployment tool like Netlify, do not sync the `.env` file to your source code repository. Instead, manually set those environment variables in the CD tool to ensure they are not exposed publically.
 

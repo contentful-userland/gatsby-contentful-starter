@@ -58,9 +58,9 @@ inquirer
     const configFilePath = path.resolve(__dirname, '..', '.env')
     writeFileSync(
       configFilePath,
-      `CFSPACEID=${spaceId}
-CPATOKEN=${previewToken}
-CDATOKEN=${accessToken}`,
+      `CONTENTFUL_SPACE_ID=${spaceId}
+CONTENTFUL_PREVIEW_TOKEN=${previewToken}
+CONTENTFUL_DELIVERY_TOKEN=${accessToken}`,
         null,
         2
     )

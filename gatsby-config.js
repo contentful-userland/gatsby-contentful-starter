@@ -5,12 +5,12 @@ if (existsSync('./.env')) {
 
 const contentfulDev = {
         "host": "preview.contentful.com",
-	"spaceId": process.env.CFSPACEID,
-	"accessToken": process.env.CPATOKEN
+	"spaceId": process.env.CONTENTFUL_SPACE_ID,
+	"accessToken": process.env.CONTENTFUL_PREVIEW_TOKEN
 	}
 const contentfulProd = {
-        "spaceId": process.env.CFSPACEID,
-	"accessToken": process.env.CDATOKEN
+        "spaceId": process.env.CONTENTFUL_SPACE_ID,
+	"accessToken": process.env.CONTENTFUL_DELIVERY_TOKEN
 	}
 
 module.exports = {
