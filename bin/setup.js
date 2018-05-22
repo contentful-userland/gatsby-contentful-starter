@@ -54,7 +54,7 @@ const questions = [
 
 inquirer
   .prompt(questions)
-  .then(({ spaceId, managementToken, deliveryToken, previewToken }) => {
+  .then(({ spaceId, managementToken, deliveryToken }) => {
 
     spaceId = spaceId || argv.spaceId
     managementToken = managementToken || argv.managementToken
