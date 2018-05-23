@@ -35,7 +35,7 @@ const questions = [
   {
     name: 'spaceId',
     message: 'Your Space ID',
-    when: !argv.spaceId,
+    when: !argv.spaceId && !process.env.CONTENTFUL_SPACE_ID,
     validate: input =>
       /^[a-z0-9]{12}$/.test(input) ||
       'Space ID must be 12 lowercase characters',
@@ -47,7 +47,7 @@ const questions = [
   },
   {
     name: 'deliveryToken',
-    when: !argv.accessToken,
+    when: !argv.accessToken && !process.env.CONTENTFUL_DELIVERY_TOKEN,
     message: 'Your Content Delivery API access token',
   },
 ]
@@ -55,10 +55,14 @@ const questions = [
 inquirer
   .prompt(questions)
   .then(({ spaceId, managementToken, deliveryToken }) => {
+    const { CONTENTFUL_SPACE_ID, CONTENTFUL_DELIVERY_TOKEN } = process.env
 
-    spaceId = spaceId || argv.spaceId
-    managementToken = managementToken || argv.managementToken
-    deliveryToken = deliveryToken || argv.deliveryToken
+    // env vars are given precedence followed by args provided to the setup
+    // followed by input given to prompts displayed by the setup script
+    spaceId = CONTENTFUL_SPACE_ID || argv.spaceId || spaceId
+    managementToken = argv.managementToken || managementToken
+    deliveryToken =
+      CONTENTFUL_DELIVERY_TOKEN || argv.deliveryToken || deliveryToken
 
     console.log('Writing config file...')
     const configFilePath = path.resolve(__dirname, '..', '.contentful.json')
