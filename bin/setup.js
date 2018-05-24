@@ -47,7 +47,7 @@ const questions = [
   },
   {
     name: 'deliveryToken',
-    when: !argv.accessToken && !process.env.CONTENTFUL_DELIVERY_TOKEN,
+    when: !argv.deliveryToken && !process.env.CONTENTFUL_DELIVERY_TOKEN,
     message: 'Your Content Delivery API access token',
   },
 ]
@@ -71,7 +71,7 @@ inquirer
       JSON.stringify(
         {
           spaceId,
-          accessToken: deliveryToken,
+          deliveryToken: deliveryToken,
         },
         null,
         2
