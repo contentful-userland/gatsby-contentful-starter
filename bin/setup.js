@@ -71,7 +71,7 @@ inquirer
       JSON.stringify(
         {
           spaceId,
-          deliveryToken: deliveryToken,
+          accessToken: deliveryToken,
         },
         null,
         2
