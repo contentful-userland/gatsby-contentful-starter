@@ -31,7 +31,7 @@ export default class ArticlePreview extends React.Component {
         <div className={`${styles.overlay} ${active ? styles.active : ''}`} />
         <img src={`${article.heroImage.file.url}?fit=scale&w=350&h=196`} alt="" />
         <h3 className={styles.previewTitle}>
-          <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+          <Link to={'/'}>{article.title}</Link>
         </h3>
         <small>{article.publishDate}</small>
         <p
