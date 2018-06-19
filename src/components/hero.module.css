@@ -50,4 +50,8 @@
   .hero {
     height: 25em;
   }
+
+  .heroDetails {
+    top: 50%;
+  }
 }
