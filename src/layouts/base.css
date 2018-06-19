@@ -12,6 +12,7 @@ body {
   line-height: 1.65;
   color: #373F49;
   background: #eee;
+  margin: 0;
 }
 
 img {
@@ -59,6 +60,26 @@ a {
   padding: 1em 0;
   margin: 0 0 1em;
   border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 900px) {
+  .section-headline {
+    padding: 0.3em 0;
+    margin: 0 0 0.6em;
+  }
+
+  .wrapper {
+    width: calc(100% - 4em);
+    margin: 0 auto;
+    padding: 1em 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
 }
 
 /**

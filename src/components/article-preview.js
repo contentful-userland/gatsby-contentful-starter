@@ -14,7 +14,7 @@ export default class ArticlePreview extends React.Component {
           <Link to={'/'}>{article.title}</Link>
         </h3>
         <small>{article.publishDate}</small>
-        <p
+        <p className={styles.description}
           dangerouslySetInnerHTML={{
             __html: article.description.childMarkdownRemark.html,
           }}

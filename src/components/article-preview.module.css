@@ -16,3 +16,18 @@
 .preview {
   position: relative;
 }
+
+@media screen and (max-width: 900px) {
+  .previewTitle {
+    font-size: 1em;
+    margin: 0.5em 0;
+  }
+
+  .tag {
+    padding: .2rem .4rem;
+  }
+
+  .description {
+    font-size: 0.9em;
+  }
+}

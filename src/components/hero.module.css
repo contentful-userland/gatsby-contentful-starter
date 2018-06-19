@@ -7,8 +7,7 @@
 }
 
 .heroImage {
-  height: 100%;
-  width: auto;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -45,4 +44,10 @@
 
 .active {
   opacity: 0.5;
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    height: 25em;
+  }
 }

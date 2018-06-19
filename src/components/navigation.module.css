@@ -9,6 +9,14 @@
 .navigationItem {
   margin: 0 1em;
 }
-  .navigationItem a {
-    color: currentColor;
+
+.navigationItem a {
+  color: currentColor;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation {
+    padding: 0.5em;
+    font-size: 1em;
   }
+}
