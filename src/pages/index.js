@@ -4,7 +4,6 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
-import Overlay from '../components/overlay';
 
 class RootIndex extends React.Component {
   render() {
@@ -19,7 +18,6 @@ class RootIndex extends React.Component {
 
     return (
       <div style={containerStyle}>
-        <Overlay id={'all'} />
         <Helmet title={siteTitle} />
         <Hero person={author} />
         <div className="wrapper">
