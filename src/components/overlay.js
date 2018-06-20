@@ -23,9 +23,10 @@ export default class Overlay extends React.Component {
   }
 
   render() {
+    const { expand } = this.props;
     const { active } = this.state;
     return (
-      <div className={`${styles.overlay} ${active ? styles.active : ''}`} />
+      <div className={`${styles.overlay} ${expand ? styles.expand : ''} ${active ? styles.active : ''}`} />
     );
   }
 }

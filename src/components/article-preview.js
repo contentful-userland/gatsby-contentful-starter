@@ -8,7 +8,7 @@ export default class ArticlePreview extends React.Component {
     const { article } = this.props;
     return (
       <div className={styles.preview} ref={node => this.el = node}>
-        <Overlay id={article.slug} />
+        <Overlay expand id={article.slug} />
         <img src={`${article.heroImage.file.url}?fit=scale&w=350&h=196`} alt="" />
         <h3 className={styles.previewTitle}>
           <Link to={'/'}>{article.title}</Link>

@@ -16,7 +16,7 @@ class Template extends React.Component {
 
     return (
       <Container>
-        <Overlay id={'all'} />
+        <Overlay expand={false} id={'all'} />
         <Navigation />
         {children()}
       </Container>

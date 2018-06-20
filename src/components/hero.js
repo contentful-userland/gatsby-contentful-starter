@@ -12,7 +12,7 @@ export default class Hero extends React.Component {
       alt=""
     />
     <div className={styles.heroDetails}>
-      <Overlay id={'person'} />
+      <Overlay expand id={'person'} />
       <h3 className={styles.heroHeadline}>{person.node.name}</h3>
       <p className={styles.heroTitle}>{person.node.title}</p>
       <p>{person.node.shortBio.shortBio}</p>
