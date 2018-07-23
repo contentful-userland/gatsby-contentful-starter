@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
@@ -14,7 +13,7 @@ class RootIndex extends React.Component {
     return (
       <div style={{ background: '#fff' }}>
         <Helmet title={siteTitle} />
-        <Hero person={author} />
+        <Hero data={author.node} />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
@@ -44,8 +43,8 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            file {
-              url
+            sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+             ...GatsbyContentfulSizes_tracedSVG
             }
           }
           description {
@@ -64,11 +63,14 @@ export const pageQuery = graphql`
             shortBio
           }
           title
-          image {
-            file {
-              url
-              fileName
-              contentType
+          heroImage: image {
+            sizes(
+              maxWidth: 1180
+              maxHeight: 480
+              resizingBehavior: PAD
+              background: "rgb:000000"
+            ) {
+              ...GatsbyContentfulSizes_tracedSVG
             }
           }
         }

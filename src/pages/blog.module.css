@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 12.5em;
+  height: 61.8vh;
+  max-height: 400px;
   background: #e1e1e1;
-  margin: -1em -2.5em 1em;
   font-size: 2em;
   overflow: hidden;
 }

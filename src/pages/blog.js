@@ -13,8 +13,10 @@ class BlogIndex extends React.Component {
     return (
       <div style={{ background: '#fff' }}>
         <Helmet title={siteTitle} />
+        <div className={styles.hero}>
+          Blog
+        </div>
         <div className="wrapper">
-          <div className={styles.hero}>Blog</div>
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
             {posts.map(({ node }) => {
@@ -43,8 +45,8 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            file {
-              url
+            sizes(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+              ...GatsbyContentfulSizes_tracedSVG
             }
           }
           description {
