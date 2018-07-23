@@ -64,6 +64,10 @@ Run a production build into `./public`. The result is ready to be put on any sta
 
 Run a production build into `./public` and publish the site to GitHub pages.
 
+### `npm run cleanup-repository`
+
+Removes all dependencies, scripts and data from the installation script.
+
 ## Roadmap
 
 - [ ] [make the starter completely responsive](https://github.com/contentful-userland/gatsby-contentful-starter/issues/2)
