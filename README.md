@@ -12,7 +12,7 @@ With Contentful and Gatsby you can connect your favorite static site generator w
 
 * Simple content model and structure. Easy to adjust to your needs.
 * Contentful integration using our [Sync API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization/initial-synchronization-of-entries-of-a-specific-content-type)
-* Using our [Preview API](https://www.contentful.com/developers/docs/references/content-preview-api/) for development and our [Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) for production.
+* Using our [Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
 * Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
 
 ## Contribution
@@ -44,7 +44,7 @@ This project comes with a Contentful setup command `npm run setup`.
 
 ![Command line dialog of the npm run setup command](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/setup.jpg "Command line dialog of the npm run setup command")
 
-This command will ask you for a space ID, and access tokens for the Contentful Management, Preview and Delivery API and then import the needed content model into the space you define and write a config file (`./contentful.json`).
+This command will ask you for a space ID, and access tokens for the Contentful Management and Delivery API and then import the needed content model into the space you define and write a config file (`./contentful.json`).
 
 `npm run setup` automates that for you but if you want to do it yourself rename `.contentful.json.sample` to `.contentful.json` and add your configuration in this file.
 
@@ -54,7 +54,7 @@ This project comes with a few handy commands for linting and code fixing. The mo
 
 ### `npm run dev`
 
-Run in the project locally using the [Contentful Preview API](https://www.contentful.com/developers/docs/references/content-preview-api/). This can perfect to preview changes before they go into production.
+Run in the project locally.
 
 ### `npm run build`
 

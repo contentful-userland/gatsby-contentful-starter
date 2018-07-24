@@ -1,23 +1,22 @@
 let contentfulConfig
 
 try {
-  const configFile = require('./.contentful')
-  contentfulConfig = process.env.NODE_ENV === 'production'
-    ? configFile.production
-    : configFile.development
-} catch (_) {
-  contentfulConfig = {
-    spaceId: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
-  }
-} finally {
-  const { spaceId, accessToken } = contentfulConfig
+  // Load the Contentful config from the .contentful.json
+  contentfulConfig = require('./.contentful')
+} catch (_) {}
 
-  if (!spaceId || !accessToken) {
-    throw new Error(
-      'Contentful spaceId and the delivery token need to be provided.'
-    )
-  }
+// Overwrite the Contentful config with environment variables if they exist
+contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
+  accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
+}
+
+const { spaceId, accessToken } = contentfulConfig
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    'Contentful spaceId and the delivery token need to be provided.'
+  )
 }
 
 module.exports = {
