@@ -1,7 +1,10 @@
 let contentfulConfig
 
 try {
-  contentfulConfig = require('./.contentful')
+  const configFile = require('./.contentful')
+  contentfulConfig = process.env.NODE_ENV === 'production'
+    ? configFile.production
+    : configFile.development
 } catch (_) {
   contentfulConfig = {
     spaceId: process.env.CONTENTFUL_SPACE_ID,
