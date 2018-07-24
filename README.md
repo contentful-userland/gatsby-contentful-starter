@@ -70,9 +70,9 @@ Removes all dependencies, scripts and data from the installation script.
 
 ## Roadmap
 
-- [ ] [make the starter completely responsive](https://github.com/contentful-userland/gatsby-contentful-starter/issues/2)
+- [x] [make the starter completely responsive](https://github.com/contentful-userland/gatsby-contentful-starter/issues/2)
 - [ ] [include tags](https://github.com/contentful-userland/gatsby-contentful-starter/issues/3)
-- [ ] [support traced placeholders](https://github.com/contentful-userland/gatsby-contentful-starter/issues/4)
+- [x] [support traced placeholders](https://github.com/contentful-userland/gatsby-contentful-starter/issues/4)
 - [ ] [add i18n](https://github.com/contentful-userland/gatsby-contentful-starter/issues/6)
 
 ## Other resources
