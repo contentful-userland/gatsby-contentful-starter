@@ -17,7 +17,7 @@ With Contentful and Gatsby you can connect your favorite static site generator w
 
 ## Contribution
 
-This project is part of [contentful-userland](https://github.com/contentful-userland) which means that we’re always open to contributions and pull requests. You can learn more about how contentful userland is organized by visiting [our about repository](https://github.com/contentful-userland/about).
+This project is part of [contentful-userland](https://github.com/contentful-userland) which means that we’re always open to contributions **and you can be part of userland and shape the project yourself after your first merged pull request**. You can learn more about how contentful userland is organized by visiting [our about repository](https://github.com/contentful-userland/about).
 
 ## Requirements
 
