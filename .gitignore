@@ -50,6 +50,8 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
+!gatsby.tgz
+!gatsby-*.tgz
 
 # Yarn Integrity file
 .yarn-integrity

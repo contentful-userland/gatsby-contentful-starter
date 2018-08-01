@@ -26,8 +26,15 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-source-contentful',
-      options: contentfulConfig,
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: "Contentful",
+        fieldName: "contentful",
+        url: `https://cdn.contentful.com/spaces/${contentfulConfig.spaceId}/graphql/alpha`,
+        headers: {
+          Authorization: `Bearer ${contentfulConfig.accessToken}`,
+        }
+      }
     }
   ],
 }
