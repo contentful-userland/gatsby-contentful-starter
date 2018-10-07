@@ -15,7 +15,9 @@
     "gatsby-transformer-remark": "^1.7.44",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "sharp": "^0.21.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
