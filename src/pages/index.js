@@ -2,6 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
+import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
@@ -11,22 +12,24 @@ class RootIndex extends React.Component {
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
-      <div style={{ background: '#fff' }}>
-        <Helmet title={siteTitle} />
-        <Hero data={author.node} />
-        <div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
-          <ul className="article-list">
-            {posts.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node} />
-                </li>
-              )
-            })}
-          </ul>
+      <Layout location={props.location} >
+        <div style={{ background: '#fff' }}>
+          <Helmet title={siteTitle} />
+          <Hero data={author.node} />
+          <div className="wrapper">
+            <h2 className="section-headline">Recent articles</h2>
+            <ul className="article-list">
+              {posts.map(({ node }) => {
+                return (
+                  <li key={node.slug}>
+                    <ArticlePreview article={node} />
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         </div>
-      </div>
+      </Layout>
     )
   }
 }
