@@ -25,6 +25,8 @@ To use this project you have to have a Contentful account. If you don't have one
 
 ## Getting started
 
+Install [Yarn](https://yarnpkg.com/en/docs/install) (if you haven't already).
+
 ### Get the source code and install dependencies.
 
 ```
