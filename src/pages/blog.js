@@ -40,6 +40,11 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
