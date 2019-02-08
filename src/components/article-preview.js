@@ -16,5 +16,10 @@ export default ({ article }) => (
         __html: article.description.childMarkdownRemark.html,
       }}
     />
+    {article.tags.map(tag => (
+      <p className={styles.tag} key={tag}>
+        {tag}
+      </p>
+    ))}
   </div>
 )
