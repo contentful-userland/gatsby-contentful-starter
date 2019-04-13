@@ -7,30 +7,30 @@
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
   "dependencies": {
-    "gatsby-image": "^2.0.13",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.0.6",
-    "gatsby-source-contentful": "^2.0.2",
-    "gatsby-transformer-remark": "^2.1.6",
-    "gatsby-transformer-sharp": "^2.0.6",
+    "gatsby-image": "^2.0.38",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.34",
+    "gatsby-source-contentful": "^2.0.48",
+    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-sharp": "^2.1.18",
     "lodash": "^4.17.11",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "sharp": "^0.21.0"
+    "sharp": "^0.22.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "chalk": "^2.4.1",
-    "contentful-import": "^7.4.0",
-    "eslint": "^5.6.1",
-    "eslint-plugin-react": "^7.11.1",
-    "gatsby": "^2.0.18",
+    "chalk": "^2.4.2",
+    "contentful-import": "^7.4.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "gatsby": "^2.3.22",
     "gh-pages": "^2.0.1",
-    "inquirer": "^6.2.0",
-    "prettier": "^1.14.3",
-    "rimraf": "^2.6.2",
-    "yargs-parser": "^11.0.0"
+    "inquirer": "^6.2.2",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.3",
+    "yargs-parser": "^13.0.0"
   },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
   "keywords": [
