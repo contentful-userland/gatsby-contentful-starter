@@ -23,6 +23,7 @@
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.2",
     "contentful-import": "^7.4.3",
+    "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.12.4",
     "gatsby": "^2.3.22",
@@ -44,7 +45,8 @@
     "url": "git+https://github.com/contentful-userland/gatsby-contentful-starter.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "npm run develop",
+    "develop": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
@@ -53,6 +55,7 @@
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
     "postinstall": "node ./bin/hello.js",
     "setup": "node ./bin/setup.js",
+    "start": "npm run develop",
     "heroku-postbuild": "gatsby build",
     "cleanup-repository": "rimraf bin contentful && yarn remove contentful-import chalk inquirer rimraf "
   }
