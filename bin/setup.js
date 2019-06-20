@@ -46,39 +46,40 @@ const questions = [
     message: 'Your Content Management API access token',
   },
   {
-    name: 'deliveryToken',
-    when: !argv.deliveryToken && !process.env.CONTENTFUL_DELIVERY_TOKEN,
+    name: 'accessToken',
+    when: !argv.accessToken && !process.env.CONTENTFUL_ACCESS_TOKEN_TOKEN,
     message: 'Your Content Delivery API access token',
   },
 ]
 
 inquirer
   .prompt(questions)
-  .then(({ spaceId, managementToken, deliveryToken }) => {
-    const { CONTENTFUL_SPACE_ID, CONTENTFUL_DELIVERY_TOKEN } = process.env
+  .then(({ spaceId, managementToken, accessToken }) => {
+    const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
 
     // env vars are given precedence followed by args provided to the setup
     // followed by input given to prompts displayed by the setup script
     spaceId = CONTENTFUL_SPACE_ID || argv.spaceId || spaceId
     managementToken = argv.managementToken || managementToken
-    deliveryToken =
-      CONTENTFUL_DELIVERY_TOKEN || argv.deliveryToken || deliveryToken
+    accessToken =
+      CONTENTFUL_ACCESS_TOKEN || argv.accessToken || accessToken
 
     console.log('Writing config file...')
-    const configFilePath = path.resolve(__dirname, '..', '.contentful.json')
-    writeFileSync(
-      configFilePath,
-      JSON.stringify(
-        {
-          spaceId,
-          accessToken: deliveryToken,
-        },
-        null,
-        2
-      )
-    )
-    console.log(`Config file ${chalk.yellow(configFilePath)} written`)
+    const configFiles = [`.env.development`, `.env.production`]
+      .map(file => path.join(__dirname, '..', file))
 
+    const fileContents = [
+      `# All environment variables will be sourced`,
+      `# and made available to gatsby-config.js, gatsby-node.js, etc.`,
+      `# Do NOT commit this file to source control`,
+      `CONTENTFUL_SPACE_ID='${spaceId}'`,
+      `CONTENTFUL_ACCESS_TOKEN='${accessToken}'`
+    ].join('\n') + '\n'
+
+    configFiles.forEach(file => {
+      writeFileSync(file, fileContents, 'utf8')
+      console.log(`Config file ${chalk.yellow(file)} written`)
+    })
     return { spaceId, managementToken }
   })
   .then(({ spaceId, managementToken }) =>
