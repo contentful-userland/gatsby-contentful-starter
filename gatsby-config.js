@@ -1,6 +1,4 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
-})
+require('dotenv').config()
 
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
