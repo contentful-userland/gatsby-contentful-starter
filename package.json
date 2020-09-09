@@ -13,7 +13,7 @@
     "gatsby-source-contentful": "^2.2.9",
     "gatsby-transformer-remark": "^2.7.3",
     "gatsby-transformer-sharp": "^2.4.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
