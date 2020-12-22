@@ -10,6 +10,8 @@ const RootIndex = ({ data }) => {
   const posts = data?.allContentfulBlogPost?.edges
   const [author] = data?.allContentfulPerson?.edges
 
+  console.log({ author, posts, data })
+
   return (
     <Layout>
       <div style={{ background: '#fff' }}>
@@ -52,6 +54,13 @@ export const pageQuery = graphql`
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid_tracedSVG
             }
+            gatsbyImageData(
+              layout: FLUID
+              maxWidth: 350
+              maxHeight: 196
+              resizingBehavior: SCALE
+              placeholder: TRACED_SVG
+            )
           }
           description {
             childMarkdownRemark {
@@ -72,12 +81,15 @@ export const pageQuery = graphql`
           }
           title
           heroImage: image {
-            fluid(
+            gatsbyImageData(
+              layout: FLUID
               maxWidth: 1180
               maxHeight: 480
               resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
+              placeholder: TRACED_SVG
+              # background: "rgb:000000"
+            )
+            fluid(maxWidth: 1180, maxHeight: 480, resizingBehavior: PAD) {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
