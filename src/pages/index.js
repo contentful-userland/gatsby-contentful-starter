@@ -51,16 +51,14 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
             gatsbyImageData(
-              layout: FLUID
-              maxWidth: 350
-              maxHeight: 196
+              layout: FIXED
+              width: 350
+              height: 196
               resizingBehavior: SCALE
               placeholder: TRACED_SVG
             )
+            description
           }
           description {
             childMarkdownRemark {
@@ -83,15 +81,14 @@ export const pageQuery = graphql`
           heroImage: image {
             gatsbyImageData(
               layout: FLUID
-              maxWidth: 1180
-              maxHeight: 480
+              width: 1180
+              height: 480
+              #@todo replace width & height with upcoming aspect ratio
+              #aspectRatio: 0.4
               resizingBehavior: PAD
               placeholder: TRACED_SVG
-              # background: "rgb:000000"
+              background: "rgb:000000"
             )
-            fluid(maxWidth: 1180, maxHeight: 480, resizingBehavior: PAD) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
           }
         }
       }
