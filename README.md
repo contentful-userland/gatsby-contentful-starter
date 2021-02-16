@@ -1,3 +1,5 @@
+## ⚠️ Please use [the officially supported Contentful Gatsby starter](https://github.com/contentful/starter-gatsby-blog).
+
 # gatsby-contentful-starter
 
 Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
